@@ -1,0 +1,6 @@
+# Master
+curl -sfL https://get.k3s.io | K3S_TOKEN="$token" K3S_KUBECONFIG_MODE="644" sh -
+
+
+# Agent
+curl -sfL https://get.k3s.io | K3S_URL=https://$master_node:server:6443 K3S_TOKEN="$token" sh -
